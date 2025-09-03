@@ -26,6 +26,7 @@ const DEFAULT_CONFIG: StartAvatarRequest = {
   quality: AvatarQuality.Low,
   avatarName: "Katya_CasualLook_public",
   knowledgeId: undefined,
+  jobTitle: undefined,
   voice: {
     rate: 1.5,
     emotion: VoiceEmotion.EXCITED,
