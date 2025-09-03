@@ -8,7 +8,7 @@ dependencies:
   '@heygen/streaming-avatar':
     specifier: ^2.0.13
     version: 2.0.13
-  '@radix-ui/react-select':
+  '@radix-ui/react-select': 
     specifier: ^2.1.7
     version: 2.1.7(@types/react-dom@19.1.2)(@types/react@19.0.1)(react-dom@19.1.0)(react@19.1.0)
   '@radix-ui/react-switch':
