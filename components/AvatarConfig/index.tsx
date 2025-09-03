@@ -67,57 +67,7 @@ const JOB_TITLES = [
           onChange={(value) => onChange("knowledgeId", value)}
         />
       </Field>
-      {/* <Field label="Select Job Title">
-        <Select
-          options={JOB_TITLES}
-          placeholder="Select Job Title"
-          renderOption={(option) => option.label}
-          value={JOB_TITLES.find((option) => option.value === config.jobTitle)?.label}
-          isSelected={(option) => option.value === config.jobTitle}
-          onSelect={(option) => {
-            if (typeof option === "string") {
-              onChange("jobTitle", "");
-            } else {
-              onChange("jobTitle", option.value);
-            }
-          }}
-        />
-      </Field> */}
-      {/* <Field label="Avatar ID">
-        <Select
-          isSelected={(option) =>
-            typeof option === "string"
-              ? !!selectedAvatar?.isCustom
-              : option.avatar_id === selectedAvatar?.avatarId
-          }
-          options={[...AVATARS, "CUSTOM"]}
-          placeholder="Select Avatar"
-          renderOption={(option) => {
-            return typeof option === "string"
-              ? "Custom Avatar ID"
-              : option.name;
-          }}
-          value={
-            selectedAvatar?.isCustom ? "Custom Avatar ID" : selectedAvatar?.name
-          }
-          onSelect={(option) => {
-            if (typeof option === "string") {
-              onChange("avatarName", "");
-            } else {
-              onChange("avatarName", option.avatar_id);
-            }
-          }}
-        />
-      </Field>
-      {selectedAvatar?.isCustom && (
-        <Field label="Custom Avatar ID">
-          <Input
-            placeholder="Enter custom avatar ID"
-            value={config.avatarName}
-            onChange={(value) => onChange("avatarName", value)}
-          />
-        </Field>
-      )} */}
+  
       <Field label="Language">
         <Select
           isSelected={(option) => option.value === config.language}
