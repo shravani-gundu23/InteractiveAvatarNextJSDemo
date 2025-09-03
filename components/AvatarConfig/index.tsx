@@ -67,7 +67,7 @@ const JOB_TITLES = [
           onChange={(value) => onChange("knowledgeId", value)}
         />
       </Field>
-      <Field label="Select Job Title">
+      {/* <Field label="Select Job Title">
         <Select
           options={JOB_TITLES}
           placeholder="Select Job Title"
@@ -82,7 +82,7 @@ const JOB_TITLES = [
             }
           }}
         />
-      </Field>
+      </Field> */}
       {/* <Field label="Avatar ID">
         <Select
           isSelected={(option) =>
