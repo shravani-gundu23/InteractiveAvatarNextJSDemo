@@ -24,7 +24,7 @@ import { AVATARS } from "@/app/lib/constants";
 
 const DEFAULT_CONFIG: StartAvatarRequest = {
   quality: AvatarQuality.Low,
-  avatarName: AVATARS[0].avatar_id,
+  avatarName: "Katya_CasualLook_public",
   knowledgeId: undefined,
   voice: {
     rate: 1.5,
@@ -138,7 +138,7 @@ function InteractiveAvatar() {
           ) : sessionState === StreamingAvatarSessionState.INACTIVE ? (
             <div className="flex flex-row gap-4">
               <Button onClick={() => startSessionV2(true)}>
-                Start Voice Chat
+                Start Interview
               </Button>
               <Button onClick={() => startSessionV2(false)}>
                 Start Text Chat

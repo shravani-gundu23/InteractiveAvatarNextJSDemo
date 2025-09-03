@@ -31,7 +31,13 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
     onConfigChange({ ...config, [key]: value });
   };
   const [showMore, setShowMore] = useState<boolean>(false);
-
+const JOB_TITLES = [
+  { label: "Java Software Engineer", value: "software_engineer" },
+  { label: "Product Manager", value: "product_manager" },
+  { label: "Data Scientist", value: "data_scientist" },
+  { label: "UX Designer", value: "ux_designer" },
+  { label: "Sales Associate", value: "sales_associate" },
+];
   const selectedAvatar = useMemo(() => {
     const avatar = AVATARS.find(
       (avatar) => avatar.avatar_id === config.avatarName,
@@ -61,7 +67,23 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
           onChange={(value) => onChange("knowledgeId", value)}
         />
       </Field>
-      <Field label="Avatar ID">
+      <Field label="Select Job Title">
+        <Select
+          options={JOB_TITLES}
+          placeholder="Select Job Title"
+          renderOption={(option) => option.label}
+          value={JOB_TITLES.find((option) => option.value === config.jobTitle)?.label}
+          isSelected={(option) => option.value === config.jobTitle}
+          onSelect={(option) => {
+            if (typeof option === "string") {
+              onChange("jobTitle", "");
+            } else {
+              onChange("jobTitle", option.value);
+            }
+          }}
+        />
+      </Field>
+      {/* <Field label="Avatar ID">
         <Select
           isSelected={(option) =>
             typeof option === "string"
@@ -95,7 +117,7 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
             onChange={(value) => onChange("avatarName", value)}
           />
         </Field>
-      )}
+      )} */}
       <Field label="Language">
         <Select
           isSelected={(option) => option.value === config.language}
