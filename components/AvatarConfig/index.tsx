@@ -12,6 +12,7 @@ import { Input } from "../Input";
 import { Select } from "../Select";
 
 import { Field } from "./Field";
+import "../../styles/globals.css";
 
 import { AVATARS, STT_LANGUAGE_LIST } from "@/app/lib/constants";
 
@@ -31,13 +32,7 @@ export const AvatarConfig: React.FC<AvatarConfigProps> = ({
     onConfigChange({ ...config, [key]: value });
   };
   const [showMore, setShowMore] = useState<boolean>(false);
-const JOB_TITLES = [
-  { label: "Java Software Engineer", value: "software_engineer" },
-  { label: "Product Manager", value: "product_manager" },
-  { label: "Data Scientist", value: "data_scientist" },
-  { label: "UX Designer", value: "ux_designer" },
-  { label: "Sales Associate", value: "sales_associate" },
-];
+
   const selectedAvatar = useMemo(() => {
     const avatar = AVATARS.find(
       (avatar) => avatar.avatar_id === config.avatarName,
@@ -60,15 +55,15 @@ const JOB_TITLES = [
 
   return (
     <div className="relative flex flex-col gap-4 w-[550px] py-8 max-h-full overflow-y-auto px-4">
-      <Field label="Custom Knowledge Base ID">
+      {/* <Field label="Custom Knowledge Base ID">
         <Input
           placeholder="Enter custom knowledge base ID"
           value={config.knowledgeId}
           onChange={(value) => onChange("knowledgeId", value)}
         />
-      </Field>
+      </Field> */}
   
-      <Field label="Language">
+      <Field label="Choose Language">
         <Select
           isSelected={(option) => option.value === config.language}
           options={STT_LANGUAGE_LIST}
@@ -80,7 +75,7 @@ const JOB_TITLES = [
           onSelect={(option) => onChange("language", option.value)}
         />
       </Field>
-      <Field label="Avatar Quality">
+      {/* <Field label="Avatar Quality">
         <Select
           isSelected={(option) => option === config.quality}
           options={Object.values(AvatarQuality)}
@@ -88,8 +83,8 @@ const JOB_TITLES = [
           value={config.quality}
           onSelect={(option) => onChange("quality", option)}
         />
-      </Field>
-      <Field label="Voice Chat Transport">
+      </Field> */}
+      {/* <Field label="Voice Chat Transport">
         <Select
           isSelected={(option) => option === config.voiceChatTransport}
           options={Object.values(VoiceChatTransport)}
@@ -97,8 +92,8 @@ const JOB_TITLES = [
           value={config.voiceChatTransport}
           onSelect={(option) => onChange("voiceChatTransport", option)}
         />
-      </Field>
-      {showMore && (
+      </Field> */}
+      {/* {showMore && (
         <>
           <h1 className="text-zinc-100 w-full text-center mt-5">
             Voice Settings
@@ -150,15 +145,15 @@ const JOB_TITLES = [
                 })
               }
             />
-          </Field>
-        </>
-      )}
-      <button
+          </Field> */}
+        {/* </>
+      )} */}
+      {/* <button
         className="text-zinc-400 text-sm cursor-pointer w-full text-center bg-transparent"
         onClick={() => setShowMore(!showMore)}
       >
         {showMore ? "Show less" : "Show more..."}
-      </button>
+      </button> */}
     </div>
   );
 };

@@ -1,0 +1,114 @@
+.bg {
+  background: linear-gradient(180deg, #f8faff 0%, #eaf1fb 100%);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem 1rem 3rem;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoBox {
+  background: #6c47ff;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoIcon {
+  color: #fff;
+  font-size: 28px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 22px;
+  color:#000;
+}
+
+.subBrand {
+  font-size: 14px;
+  color: #888;
+}
+
+.aiActive {
+  background: #e6fff2;
+  color: #1dbf73;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.welcome {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color:#000;
+}
+
+.highlight {
+  color: grey;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.automationBtn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.createBtn {
+  background: linear-gradient(90deg, #6c47ff 0%, #a259ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.openReqs {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color:#000
+}

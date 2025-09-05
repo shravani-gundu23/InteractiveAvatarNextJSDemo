@@ -1,5 +1,6 @@
 import { ToggleGroup, ToggleGroupItem } from "@radix-ui/react-toggle-group";
 import React from "react";
+import "../../styles/globals.css";
 
 import { useVoiceChat } from "../logic/useVoiceChat";
 import { Button } from "../Button";

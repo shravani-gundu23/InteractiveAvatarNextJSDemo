@@ -9,6 +9,7 @@ import {
 } from "@heygen/streaming-avatar";
 import { useEffect, useRef, useState } from "react";
 import { useMemoizedFn, useUnmount } from "ahooks";
+import "../styles/globals.css";
 
 import { Button } from "./Button";
 import { AvatarConfig } from "./AvatarConfig";
@@ -23,16 +24,16 @@ import { MessageHistory } from "./AvatarSession/MessageHistory";
 import { AVATARS } from "@/app/lib/constants";
 
 const DEFAULT_CONFIG: StartAvatarRequest = {
-  quality: AvatarQuality.Low,
+  quality: AvatarQuality.Medium,
   avatarName: "Katya_CasualLook_public",
-  knowledgeId: undefined,
+  knowledgeId: "3c0efe0423a746dd98718075276b32c4",
   voice: {
     rate: 1.5,
     emotion: VoiceEmotion.EXCITED,
     model: ElevenLabsModel.eleven_flash_v2_5,
   },
   language: "en",
-  voiceChatTransport: VoiceChatTransport.WEBSOCKET,
+  voiceChatTransport: VoiceChatTransport.LIVEKIT,
   sttSettings: {
     provider: STTProvider.DEEPGRAM,
   },
@@ -140,9 +141,9 @@ function InteractiveAvatar() {
               <Button onClick={() => startSessionV2(true)}>
                 Start Interview
               </Button>
-              <Button onClick={() => startSessionV2(false)}>
+              {/* <Button onClick={() => startSessionV2(false)}>
                 Start Text Chat
-              </Button>
+              </Button> */}
             </div>
           ) : (
             <LoadingIcon />
