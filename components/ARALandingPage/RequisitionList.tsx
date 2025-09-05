@@ -1,5 +1,6 @@
 import styles from "./Requisition.module.css";
 import RequisitionCard from "./RequisitionCard";
+import { mockCandidates } from "../candidates/mockCandidates";
 
 const requisitions = [
   {
@@ -7,30 +8,36 @@ const requisitions = [
     title: "Senior Software Engineer",
     department: "Engineering",
     location: "San Francisco",
-    created: "2024-01-15",
+    created: "2025-09-05",
     status: "Active",
-    candidates: 39,
-    newApplications: 39,
+    candidates: mockCandidates.filter(c => c.requisitionId === 1).length,
+    newApplications: mockCandidates.filter(
+      c => c.requisitionId === 1 && c.status === "New Application"
+    ).length,
   },
   {
     id: 2,
     title: "Product Manager",
     department: "Product",
     location: "New York",
-    created: "2024-01-10",
+    created: "2025-09-05",
     status: "Active",
-    candidates: 50,
-    newApplications: 50,
+    candidates: mockCandidates.filter(c => c.requisitionId === 2).length,
+    newApplications: mockCandidates.filter(
+      c => c.requisitionId === 2 && c.status === "New Application"
+    ).length,
   },
   {
     id: 3,
     title: "UX Designer",
     department: "Design",
     location: "Remote",
-    created: "2024-01-08",
+    created: "2025-09-05",
     status: "Active",
-    candidates: 33,
-    newApplications: 33,
+    candidates: mockCandidates.filter(c => c.requisitionId === 3).length,
+    newApplications: mockCandidates.filter(
+      c => c.requisitionId === 3 && c.status === "New Application"
+    ).length,
   },
 ];
 

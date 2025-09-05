@@ -51,9 +51,9 @@ export default function RequisitionCard({
           </a>
         </div>
       </div>
-      <button className={styles.pipelineBtn}>
+      {/* <button className={styles.pipelineBtn}>
         View Pipeline
-      </button>
+      </button> */}
     </div>
   );
 }

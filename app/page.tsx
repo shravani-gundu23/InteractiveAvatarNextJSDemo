@@ -1,5 +1,5 @@
 "use client";
-
+import "@/styles/globals.css";
 import InteractiveAvatar from "@/components/InteractiveAvatar";
 export default function App() {
   return (

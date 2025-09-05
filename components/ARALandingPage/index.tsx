@@ -58,7 +58,7 @@ export default function ARALandingPage() {
         <div>
           <h2 className={styles.openReqs}>Applications</h2>
           <CandidatesPage requisitionId={selectedRequisitionId!} />
-          <button onClick={handleBackToRequisitions}>← Back to Requisitions</button>
+          <button className={styles.backBtn} onClick={handleBackToRequisitions}>← Back</button>
         </div>
       )}
     </div>

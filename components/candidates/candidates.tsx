@@ -65,9 +65,9 @@ const allSelected = candidates.length > 0 && selectedIds.length === candidates.l
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>
-        Applications for {reqTitle ? `${reqTitle}` : ""}
-      </h1>
+      <h3 className={styles.heading}>
+        Requisition : {reqTitle ? `${reqTitle}` : ""}
+      </h3>
       <button
         className={styles.advanceBtn}
         onClick={handleAdvance}

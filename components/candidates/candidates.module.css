@@ -2,12 +2,11 @@
   max-width: 800px;
   background: #fff;
   border-radius: 12px;
+  padding: 1rem;
 }
 
 .heading {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 24px;
+  font-weight: 600;
   color:#000;
 }
 
@@ -43,7 +42,6 @@
   border-radius: 6px;
   padding: 10px 24px;
   font-weight: 600;
-  font-size: 16px;
   cursor: pointer;
   margin-top: 1rem;
 }
